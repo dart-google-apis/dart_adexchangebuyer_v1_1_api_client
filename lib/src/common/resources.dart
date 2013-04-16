@@ -12,13 +12,13 @@ class AccountsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Account> get(int id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Account> get(core.int id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "accounts/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -47,13 +47,13 @@ class AccountsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<AccountsList> list({Map optParams}) {
-    var completer = new Completer();
+  async.Future<AccountsList> list({core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "accounts";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -84,13 +84,13 @@ class AccountsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Account> patch(Account request, int id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Account> patch(Account request, core.int id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "accounts/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -123,13 +123,13 @@ class AccountsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Account> update(Account request, int id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Account> update(Account request, core.int id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "accounts/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -168,13 +168,13 @@ class CreativesResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Creative> get(int accountId, String buyerCreativeId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Creative> get(core.int accountId, core.String buyerCreativeId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "creatives/{accountId}/{buyerCreativeId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (accountId == null) paramErrors.add("accountId is required");
     if (accountId != null) urlParams["accountId"] = accountId;
     if (buyerCreativeId == null) paramErrors.add("buyerCreativeId is required");
@@ -207,13 +207,13 @@ class CreativesResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Creative> insert(Creative request, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Creative> insert(Creative request, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "creatives";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -252,13 +252,13 @@ class CreativesResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<CreativesList> list({int maxResults, String pageToken, String statusFilter, Map optParams}) {
-    var completer = new Completer();
+  async.Future<CreativesList> list({core.int maxResults, core.String pageToken, core.String statusFilter, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "creatives";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (maxResults != null) queryParams["maxResults"] = maxResults;
     if (pageToken != null) queryParams["pageToken"] = pageToken;
     if (statusFilter != null && !["approved", "disapproved", "not_checked"].contains(statusFilter)) {
@@ -299,13 +299,13 @@ class DirectDealsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<DirectDeal> get(String id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<DirectDeal> get(core.String id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "directdeals/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -334,13 +334,13 @@ class DirectDealsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<DirectDealsList> list({Map optParams}) {
-    var completer = new Completer();
+  async.Future<DirectDealsList> list({core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "directdeals";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
