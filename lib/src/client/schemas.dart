@@ -406,6 +406,9 @@ class DirectDeal {
   /** Resource type. */
   core.String kind;
 
+  /** Deal name. */
+  core.String name;
+
   /** The name of the publisher offering this direct deal. */
   core.String sellerNetwork;
 
@@ -434,6 +437,9 @@ class DirectDeal {
     }
     if (json.containsKey("kind")) {
       kind = json["kind"];
+    }
+    if (json.containsKey("name")) {
+      name = json["name"];
     }
     if (json.containsKey("sellerNetwork")) {
       sellerNetwork = json["sellerNetwork"];
@@ -467,6 +473,9 @@ class DirectDeal {
     }
     if (kind != null) {
       output["kind"] = kind;
+    }
+    if (name != null) {
+      output["name"] = name;
     }
     if (sellerNetwork != null) {
       output["sellerNetwork"] = sellerNetwork;
